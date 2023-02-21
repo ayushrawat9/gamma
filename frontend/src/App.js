@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Modal from "./components/Modal";
 import axios from "axios";
+import SearchBar from "./components/SearchBar"
 
 class App extends Component {
   constructor(props) {
@@ -129,7 +130,10 @@ class App extends Component {
   render() {
     return (
       <main className="container">
-        <h1 className="text-white text-uppercase text-center my-4">Todo app</h1>
+        <div className="text-black text-uppercase text-center my-4">
+        <SearchBar />
+        </div>
+        {/* <h1 className="text-black text-uppercase text-center my-4">List app</h1>
         <div className="row">
           <div className="col-md-6 col-sm-10 mx-auto p-0">
             <div className="card p-3">
@@ -154,7 +158,7 @@ class App extends Component {
             toggle={this.toggle}
             onSave={this.handleSubmit}
           />
-        ) : null}
+        ) : null} */}
       </main>
     );
   }

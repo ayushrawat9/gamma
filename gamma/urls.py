@@ -26,5 +26,6 @@ router.register(r'mylist',views.MyListView,'mylist')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/',include(router.urls)),
-    path('',TemplateView.as_view(template_name='index.html'))
+    path('',TemplateView.as_view(template_name='index.html')),
+    path('api/search/',include('search_app.urls')),
 ]
